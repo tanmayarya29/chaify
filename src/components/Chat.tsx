@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import io, { Socket } from "socket.io-client";
 
-const socket: Socket = io("http://localhost:3001"); // Replace with your server URL
+// const socket: Socket = io("http://localhost:3001"); // local
+const socket: Socket = io("https://chaify-backend.vercel.app/"); // webL
 
 const Chat = () => {
   const [message, setMessage] = useState<string>("");
